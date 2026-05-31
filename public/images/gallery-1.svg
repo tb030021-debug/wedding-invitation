@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="675" viewBox="0 0 900 675" role="img" aria-label="Wedding gallery placeholder 1">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="0.55" stop-color="#f7d8dc"/>
+      <stop offset="1" stop-color="#e9d4a9"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="675" fill="url(#g)"/>
+  <circle cx="190" cy="175" r="96" fill="#fff" opacity="0.45"/>
+  <circle cx="710" cy="512" r="122" fill="#fff" opacity="0.34"/>
+  <path d="M244 441c96-122 213-184 351-186 104-1 194 30 269 94" fill="none" stroke="#b8955b" stroke-width="5" opacity="0.45"/>
+  <text x="450" y="353" text-anchor="middle" fill="#4f4540" font-family="Georgia, serif" font-size="58">Together</text>
+</svg>

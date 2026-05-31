@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1125" viewBox="0 0 900 1125" role="img" aria-label="Wedding photo placeholder 3">
+  <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f5ead8"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#dfe5d3"/></linearGradient></defs>
+  <rect width="900" height="1125" fill="url(#g)"/><path d="M178 799c116-103 250-155 402-155 64 0 121 11 171 32" fill="none" stroke="#879174" stroke-width="7" opacity=".5"/>
+  <path d="M268 328c109 39 190 103 243 192" fill="none" stroke="#d99aa5" stroke-width="7" opacity=".45"/>
+  <text x="450" y="574" text-anchor="middle" fill="#4f4540" font-family="Georgia,serif" font-size="70">Photo 3</text>
+</svg>

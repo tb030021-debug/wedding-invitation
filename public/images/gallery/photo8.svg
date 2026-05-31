@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1125" viewBox="0 0 900 1125" role="img" aria-label="Wedding photo placeholder 8">
+  <defs><radialGradient id="g" cx="50%" cy="42%" r="62%"><stop offset="0" stop-color="#fff"/><stop offset=".62" stop-color="#f7d8dc"/><stop offset="1" stop-color="#e8d0a2"/></radialGradient></defs>
+  <rect width="900" height="1125" fill="url(#g)"/><circle cx="450" cy="566" r="246" fill="none" stroke="#fffaf0" stroke-width="44" opacity=".5"/><circle cx="450" cy="566" r="156" fill="none" stroke="#b8955b" stroke-width="5" opacity=".38"/>
+  <text x="450" y="589" text-anchor="middle" fill="#4f4540" font-family="Georgia,serif" font-size="70">Photo 8</text>
+</svg>

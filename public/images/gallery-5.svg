@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" role="img" aria-label="Wedding gallery placeholder 5">
+  <rect width="800" height="800" fill="#f5ead8"/>
+  <path d="M144 612c112-223 252-334 421-334 53 0 102 11 147 33" fill="none" stroke="#b8955b" stroke-width="6" opacity="0.48"/>
+  <path d="M173 184c90 22 166 74 229 158" fill="none" stroke="#d99aa5" stroke-width="8" opacity="0.52"/>
+  <circle cx="583" cy="263" r="86" fill="#fff" opacity="0.48"/>
+  <text x="400" y="448" text-anchor="middle" fill="#4f4540" font-family="Georgia, serif" font-size="48">Promise</text>
+</svg>

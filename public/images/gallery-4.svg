@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" role="img" aria-label="Wedding gallery placeholder 4">
+  <rect width="800" height="800" fill="#fffdf8"/>
+  <circle cx="400" cy="400" r="260" fill="#e8d0a2" opacity="0.42"/>
+  <circle cx="400" cy="400" r="172" fill="#f7d8dc" opacity="0.56"/>
+  <circle cx="400" cy="400" r="84" fill="#fffaf0"/>
+  <text x="400" y="420" text-anchor="middle" fill="#4f4540" font-family="Georgia, serif" font-size="48">Day</text>
+</svg>

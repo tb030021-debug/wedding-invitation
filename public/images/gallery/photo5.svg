@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1125" viewBox="0 0 900 1125" role="img" aria-label="Wedding photo placeholder 5">
+  <rect width="900" height="1125" fill="#f5ead8"/><path d="M150 858c127-268 292-402 493-402 61 0 117 13 168 39" fill="none" stroke="#b8955b" stroke-width="8" opacity=".45"/>
+  <path d="M191 264c104 27 193 88 267 185" fill="none" stroke="#d99aa5" stroke-width="9" opacity=".5"/><circle cx="662" cy="360" r="104" fill="#fff" opacity=".45"/>
+  <text x="450" y="614" text-anchor="middle" fill="#4f4540" font-family="Georgia,serif" font-size="70">Photo 5</text>
+</svg>

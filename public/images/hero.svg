@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Wedding hero placeholder</title>
+  <desc id="desc">Warm ivory wedding placeholder image with floral accents.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="0.48" stop-color="#f7d8dc"/>
+      <stop offset="1" stop-color="#e8d0a2"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="38%" r="52%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <rect width="1200" height="1500" fill="url(#glow)"/>
+  <g fill="none" stroke="#b8955b" stroke-width="3" opacity="0.42">
+    <path d="M211 372c124-132 283-197 477-195 157 1 284 43 381 125"/>
+    <path d="M177 1112c145 117 308 175 489 172 143-3 259-38 349-105"/>
+    <path d="M600 355c99 86 155 195 156 328 1 144-52 260-156 348-104-88-157-204-156-348 1-133 57-242 156-328Z"/>
+  </g>
+  <g fill="#ffffff" opacity="0.42">
+    <circle cx="213" cy="265" r="72"/>
+    <circle cx="1016" cy="376" r="94"/>
+    <circle cx="236" cy="1208" r="108"/>
+    <circle cx="988" cy="1137" r="78"/>
+  </g>
+  <g fill="#d99aa5" opacity="0.56">
+    <circle cx="292" cy="455" r="18"/>
+    <circle cx="337" cy="420" r="12"/>
+    <circle cx="874" cy="424" r="16"/>
+    <circle cx="914" cy="462" r="10"/>
+    <circle cx="345" cy="1039" r="14"/>
+    <circle cx="849" cy="1044" r="18"/>
+  </g>
+  <g text-anchor="middle" fill="#4f4540">
+    <text x="600" y="685" font-family="Georgia, serif" font-size="76" letter-spacing="2">Wedding</text>
+    <text x="600" y="757" font-family="Apple SD Gothic Neo, sans-serif" font-size="30" letter-spacing="8" fill="#8b7350">INVITATION</text>
+  </g>
+</svg>

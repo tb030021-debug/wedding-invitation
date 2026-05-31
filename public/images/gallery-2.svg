@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" role="img" aria-label="Wedding gallery placeholder 2">
+  <rect width="800" height="800" fill="#fffaf0"/>
+  <rect x="72" y="72" width="656" height="656" rx="32" fill="#f7d8dc" opacity="0.62"/>
+  <path d="M400 214c71 59 110 133 110 222 0 93-38 169-110 228-72-59-110-135-110-228 0-89 39-163 110-222Z" fill="#fff" opacity="0.5" stroke="#b8955b" stroke-width="4"/>
+  <text x="400" y="420" text-anchor="middle" fill="#4f4540" font-family="Georgia, serif" font-size="52">Love</text>
+</svg>
