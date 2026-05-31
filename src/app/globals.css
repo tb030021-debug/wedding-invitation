@@ -50,7 +50,7 @@ textarea:focus-visible {
   }
 
   .section-title {
-    @apply font-serif text-[1.35rem] font-semibold leading-tight text-ink;
+    @apply font-serif text-[1.48rem] font-semibold leading-tight text-ink;
   }
 
   .section-kicker {

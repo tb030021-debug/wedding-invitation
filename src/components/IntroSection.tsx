@@ -30,7 +30,9 @@ export default function IntroSection() {
         </div>
       </div>
       <div className="space-y-3 px-6 py-7 text-center">
-        <p className="font-serif text-xl leading-relaxed text-ink">{weddingData.introMessage}</p>
+        <p className="whitespace-pre-line font-serif text-xl leading-relaxed text-ink">
+          {weddingData.introMessage}
+        </p>
         <p className="text-sm leading-7 text-ink/70">
           {weddingData.venueName} · {weddingData.weddingTime}
         </p>

@@ -20,6 +20,17 @@ const config: Config = {
       boxShadow: {
         soft: "0 16px 48px rgba(95, 70, 54, 0.10)"
       },
+      fontSize: {
+        xs: ["0.8125rem", { lineHeight: "1.125rem" }],
+        sm: ["0.9375rem", { lineHeight: "1.375rem" }],
+        base: ["1.0625rem", { lineHeight: "1.625rem" }],
+        lg: ["1.1875rem", { lineHeight: "1.75rem" }],
+        xl: ["1.375rem", { lineHeight: "2rem" }],
+        "2xl": ["1.625rem", { lineHeight: "2.125rem" }],
+        "3xl": ["2rem", { lineHeight: "2.4rem" }],
+        "4xl": ["2.5rem", { lineHeight: "2.85rem" }],
+        "5xl": ["3.25rem", { lineHeight: "1" }]
+      },
       fontFamily: {
         sans: [
           "var(--font-wedding-body)",

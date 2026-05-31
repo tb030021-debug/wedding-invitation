@@ -103,7 +103,7 @@ export default function AccountSection() {
                                 onClick={() => handleKakaoPay(account.kakaoPayUrl)}
                               >
                                 <WalletCards aria-hidden size={16} />
-                                카카오페이 송금
+                                카카오페이
                               </button>
                             ) : null}
                           </div>
