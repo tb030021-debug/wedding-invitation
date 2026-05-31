@@ -35,9 +35,9 @@ export const weddingData = {
   venueName: "BMK컨벤션 아스틴홀 4F",
   venueAddress: "대전 중구 서문로 133",
   heroImage: "/images/hero.jpeg",
-  introMessage: "서로의 계절이 되어 같은 길을 걷겠습니다.",
+  introMessage: "서로의 계절이 되어\n같은 길을 걷겠습니다.",
   invitationMessage:
-    "저희 두 사람이 사랑과 믿음으로 한 가정을 이루려 합니다. \n귀한 걸음으로 함께해 주시면 더없는 기쁨으로 간직하겠습니다.",
+    "저희 두 사람이 사랑과 믿음으로\n한 가정을 이루려 합니다.\n귀한 걸음으로 함께해 주시면\n더없는 기쁨으로 간직하겠습니다.",
   groomPhone: "010-2733-5177",
   bridePhone: "010-4456-7562",
   mapLinks: {
@@ -77,8 +77,8 @@ export const weddingData = {
         {
           relation: "어머니",
           name: "배지수",
-          bank: "하나은행",
-          accountNumber: "355-910123-45607",
+          bank: "농협",
+          accountNumber: "150-121-56-023179",
           kakaoPayUrl: ""
         }
       ]
