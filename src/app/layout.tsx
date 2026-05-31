@@ -1,9 +1,24 @@
 import type { Metadata, Viewport } from "next";
+import { Gaegu, Gowun_Dodum } from "next/font/google";
 import { weddingData } from "@/data/wedding";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 const coupleTitle = `${weddingData.groomName} & ${weddingData.brideName} 모바일 청첩장`;
+
+const weddingBodyFont = Gaegu({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-wedding-body",
+  display: "swap"
+});
+
+const weddingFallbackFont = Gowun_Dodum({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-wedding-fallback",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -31,7 +46,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body className={`${weddingBodyFont.variable} ${weddingFallbackFont.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

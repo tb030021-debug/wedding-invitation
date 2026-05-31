@@ -22,15 +22,16 @@ const config: Config = {
       },
       fontFamily: {
         sans: [
-          "Pretendard",
+          "var(--font-wedding-body)",
+          "var(--font-wedding-fallback)",
           "Apple SD Gothic Neo",
           "Noto Sans KR",
           "system-ui",
           "sans-serif"
         ],
         serif: [
-          "Georgia",
-          "Times New Roman",
+          "var(--font-wedding-body)",
+          "var(--font-wedding-fallback)",
           "AppleMyungjo",
           "Batang",
           "serif"

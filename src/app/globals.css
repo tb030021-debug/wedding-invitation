@@ -21,7 +21,13 @@ body {
     radial-gradient(circle at top left, rgba(247, 216, 220, 0.45), transparent 30rem),
     linear-gradient(180deg, #fffaf0 0%, #fffdf8 46%, #f7efe2 100%);
   color: #4f4540;
-  font-family: Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+  font-family:
+    var(--font-wedding-body),
+    var(--font-wedding-fallback),
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    system-ui,
+    sans-serif;
 }
 
 button,
