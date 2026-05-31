@@ -46,8 +46,8 @@ export default function CalendarSection() {
           })}
         </div>
       </div>
-      <p className="mt-4 text-center text-sm leading-6 text-ink/65">
-        분홍빛으로 표시된 날, 두 사람의 시작을 함께 축복해 주세요.
+      <p className="mt-4 whitespace-pre-line text-center text-sm leading-6 text-ink/65">
+        {"분홍빛으로 표시된 날,\n두 사람의 시작을 함께 축복해 주세요."}
       </p>
     </SectionShell>
   );
