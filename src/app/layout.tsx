@@ -6,7 +6,7 @@ import "./globals.css";
 
 const siteUrl = weddingData.siteUrl;
 const coupleTitle = `${weddingData.groomName} ♥ ${weddingData.brideName}, 결혼합니다`;
-const coupleDescription = `${formatKoreanDate(weddingData.weddingDate)}, 저희의 소중한 날에 초대합니다.`;
+const coupleDescription = `${formatKoreanDate(weddingData.weddingDate)}\n저희 소중한 날에 초대합니다.`;
 const heroImageUrl = new URL(weddingData.heroImage, siteUrl).toString();
 
 const weddingBodyFont = Gaegu({
