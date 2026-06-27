@@ -10,7 +10,7 @@ export default function ShareSection() {
   const [status, setStatus] = useState("");
 
   const handleCopyLink = async () => {
-    const url = process.env.NEXT_PUBLIC_SITE_URL || window.location.href;
+    const url = window.location.href;
     const ok = await copyToClipboard(url);
     if (ok) {
       setStatus("현재 페이지 링크가 복사되었습니다.");

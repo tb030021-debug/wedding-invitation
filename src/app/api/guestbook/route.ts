@@ -6,6 +6,7 @@ import { guestbookCreateSchema } from "@/lib/validation";
 import { getOrCreateWedding } from "@/lib/wedding";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 const publicSelect = {
   id: true,
@@ -32,7 +33,14 @@ export async function GET(request: NextRequest) {
       select: publicSelect
     });
 
-    return NextResponse.json({ messages });
+    return NextResponse.json(
+      { messages },
+      {
+        headers: {
+          "Cache-Control": "no-store"
+        }
+      }
+    );
   } catch {
     return NextResponse.json(
       { message: "방명록을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요." },

@@ -42,7 +42,6 @@ export default function GallerySection() {
             alt={selectedImage.alt}
             className="block aspect-[4/5] w-full animate-[galleryFade_360ms_ease] object-cover"
             fallbackClassName="aspect-[4/5] w-full animate-[galleryFade_360ms_ease]"
-            loading="eager"
           />
           <div className="absolute inset-y-0 left-0 flex items-center px-2">
             <button
@@ -87,7 +86,7 @@ export default function GallerySection() {
                 aria-current={isSelected ? "true" : undefined}
               >
                 <SafeImage
-                  src={image.src}
+                  src={image.thumbnailSrc}
                   alt={image.alt}
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />

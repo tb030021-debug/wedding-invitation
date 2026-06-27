@@ -6,6 +6,7 @@ import { adminGuestbookQuerySchema } from "@/lib/validation";
 import { getOrCreateWedding } from "@/lib/wedding";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 const adminGuestbookSelect = {
   id: true,
@@ -81,15 +82,22 @@ export async function GET(request: NextRequest) {
       })
     ]);
 
-    return NextResponse.json({
-      messages,
-      stats: {
-        totalCount,
-        groomCount,
-        brideCount,
-        hiddenCount
+    return NextResponse.json(
+      {
+        messages,
+        stats: {
+          totalCount,
+          groomCount,
+          brideCount,
+          hiddenCount
+        }
+      },
+      {
+        headers: {
+          "Cache-Control": "no-store"
+        }
       }
-    });
+    );
   } catch {
     return NextResponse.json(
       { message: "방명록 목록을 불러오지 못했습니다." },

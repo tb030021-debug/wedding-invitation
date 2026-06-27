@@ -2,6 +2,11 @@ import { z } from "zod";
 
 export const guestbookSideSchema = z.enum(["GROOM_SIDE", "BRIDE_SIDE"]);
 
+const fourDigitPasswordSchema = z
+  .string()
+  .trim()
+  .regex(/^\d{4}$/, "삭제용 비밀번호는 숫자 4자리로 입력해 주세요.");
+
 const trimmedString = (min: number, max: number, label: string) =>
   z
     .string()
@@ -14,11 +19,11 @@ export const guestbookCreateSchema = z.object({
   name: trimmedString(1, 20, "이름"),
   side: guestbookSideSchema,
   message: trimmedString(1, 300, "축하 메시지"),
-  password: trimmedString(4, 30, "삭제용 비밀번호")
+  password: fourDigitPasswordSchema
 });
 
 export const guestbookDeleteSchema = z.object({
-  password: trimmedString(4, 30, "삭제용 비밀번호")
+  password: fourDigitPasswordSchema
 });
 
 export const adminLoginSchema = z.object({

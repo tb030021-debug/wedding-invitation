@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import { Gaegu, Gowun_Dodum } from "next/font/google";
 import { weddingData } from "@/data/wedding";
+import { formatKoreanDate } from "@/utils/date";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-const coupleTitle = `${weddingData.groomName} & ${weddingData.brideName} 모바일 청첩장`;
+const siteUrl = weddingData.siteUrl;
+const coupleTitle = `${weddingData.groomName} ♥ ${weddingData.brideName}, 결혼합니다`;
+const coupleDescription = `${formatKoreanDate(weddingData.weddingDate)}, 저희의 소중한 날에 초대합니다.`;
+const heroImageUrl = new URL(weddingData.heroImage, siteUrl).toString();
 
 const weddingBodyFont = Gaegu({
   weight: ["400", "700"],
@@ -23,12 +26,31 @@ const weddingFallbackFont = Gowun_Dodum({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: coupleTitle,
-  description: `${weddingData.groomName}, ${weddingData.brideName}의 결혼식에 초대합니다.`,
+  description: coupleDescription,
+  alternates: {
+    canonical: siteUrl
+  },
   openGraph: {
     title: coupleTitle,
-    description: "소중한 날, 함께 축복해 주세요.",
-    images: [weddingData.heroImage],
+    description: coupleDescription,
+    url: siteUrl,
+    siteName: `${weddingData.groomName} ♥ ${weddingData.brideName}`,
+    locale: "ko_KR",
+    images: [
+      {
+        url: heroImageUrl,
+        width: 2400,
+        height: 1600,
+        alt: `${weddingData.groomName}과 ${weddingData.brideName}의 웨딩 사진`
+      }
+    ],
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: coupleTitle,
+    description: coupleDescription,
+    images: [heroImageUrl]
   }
 };
 

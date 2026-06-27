@@ -35,8 +35,14 @@ export default function GuestbookList({ isLoading, messages, onDeleted }: Guestb
   const [isDeleting, setIsDeleting] = useState(false);
 
   const handleDelete = async (id: string) => {
-    setIsDeleting(true);
     setStatus("");
+
+    if (!/^\d{4}$/.test(password)) {
+      setStatus("삭제용 비밀번호는 숫자 4자리로 입력해 주세요.");
+      return;
+    }
+
+    setIsDeleting(true);
 
     try {
       await deleteGuestbookMessage(id, password.trim());
@@ -109,16 +115,22 @@ export default function GuestbookList({ isLoading, messages, onDeleted }: Guestb
                   <input
                     className="muted-input"
                     value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                    placeholder="삭제용 비밀번호"
+                    onChange={(event) =>
+                      setPassword(event.target.value.replace(/\D/g, "").slice(0, 4))
+                    }
+                    placeholder="삭제용 비밀번호 숫자 4자리"
                     type="password"
-                    maxLength={30}
+                    inputMode="numeric"
+                    pattern="[0-9]{4}"
+                    minLength={4}
+                    maxLength={4}
+                    autoComplete="current-password"
                   />
                   <button
                     type="button"
                     className="primary-button w-full disabled:opacity-60"
                     onClick={() => handleDelete(item.id)}
-                    disabled={isDeleting}
+                    disabled={isDeleting || password.length !== 4}
                   >
                     {isDeleting ? "삭제 중" : "삭제하기"}
                   </button>

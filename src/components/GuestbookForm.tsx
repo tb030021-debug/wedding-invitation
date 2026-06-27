@@ -25,8 +25,14 @@ export default function GuestbookForm({ onCreated }: GuestbookFormProps) {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setIsSubmitting(true);
     setStatus("");
+
+    if (!/^\d{4}$/.test(form.password)) {
+      setStatus("삭제용 비밀번호는 숫자 4자리로 입력해 주세요.");
+      return;
+    }
+
+    setIsSubmitting(true);
 
     try {
       await submitGuestbookMessage({
@@ -56,6 +62,7 @@ export default function GuestbookForm({ onCreated }: GuestbookFormProps) {
           placeholder="이름"
           maxLength={20}
           autoComplete="name"
+          required
         />
       </label>
 
@@ -89,6 +96,7 @@ export default function GuestbookForm({ onCreated }: GuestbookFormProps) {
           onChange={(event) => setForm((prev) => ({ ...prev, message: event.target.value }))}
           placeholder="따뜻한 축하 메시지를 남겨주세요"
           maxLength={300}
+          required
         />
       </label>
 
@@ -97,13 +105,25 @@ export default function GuestbookForm({ onCreated }: GuestbookFormProps) {
         <input
           className="muted-input"
           value={form.password}
-          onChange={(event) => setForm((prev) => ({ ...prev, password: event.target.value }))}
-          placeholder="삭제용 비밀번호 또는 전화번호 뒷자리"
+          onChange={(event) =>
+            setForm((prev) => ({
+              ...prev,
+              password: event.target.value.replace(/\D/g, "").slice(0, 4)
+            }))
+          }
+          placeholder="삭제용 비밀번호 숫자 4자리"
           type="password"
+          inputMode="numeric"
+          pattern="[0-9]{4}"
           minLength={4}
-          maxLength={30}
+          maxLength={4}
           autoComplete="new-password"
+          aria-describedby="guestbook-password-hint"
+          required
         />
+        <span id="guestbook-password-hint" className="mt-1.5 block px-1 text-xs text-ink/45">
+          메시지를 삭제할 때 사용할 숫자 4자리를 입력해 주세요.
+        </span>
       </label>
 
       <button type="submit" className="primary-button w-full disabled:opacity-60" disabled={isSubmitting}>
