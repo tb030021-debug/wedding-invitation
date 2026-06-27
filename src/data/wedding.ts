@@ -37,6 +37,7 @@ export const weddingData = {
   venueName: "BMK컨벤션 아스틴홀 4F",
   venueAddress: "대전 중구 서문로 133",
   heroImage: "/images/hero.jpeg",
+  shareImage: "/images/gallery/photo1.jpeg",
   introMessage: "서로의 계절이 되어\n같은 길을 걷겠습니다.",
   invitationMessage:
     "저희 두 사람이 사랑과 믿음으로\n한 가정을 이루려 합니다.\n귀한 걸음으로 함께해 주시면\n더없는 기쁨으로 간직하겠습니다.",

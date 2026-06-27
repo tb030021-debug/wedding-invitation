@@ -62,7 +62,7 @@ export default function ShareSection() {
         siteUrl,
         title: `${weddingData.groomName} ♥ ${weddingData.brideName} 결혼합니다`,
         description: `${formatKoreanDate(weddingData.weddingDate)} ${weddingData.weddingTime}`,
-        imagePath: weddingData.heroImage
+        imagePath: weddingData.shareImage
       });
       setStatus("");
     } catch (error) {
