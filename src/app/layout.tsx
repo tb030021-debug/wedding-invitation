@@ -6,7 +6,8 @@ import "./globals.css";
 
 const siteUrl = weddingData.siteUrl;
 const coupleTitle = `${weddingData.groomName} ♥ ${weddingData.brideName}, 결혼합니다`;
-const coupleDescription = `${formatKoreanDate(weddingData.weddingDate)}\n저희 소중한 날에 초대합니다.`;
+const previewTitle = formatKoreanDate(weddingData.weddingDate);
+const coupleDescription = "저희 소중한 날에 초대합니다.";
 const heroImageUrl = new URL(weddingData.heroImage, siteUrl).toString();
 
 const weddingBodyFont = Gaegu({
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     canonical: siteUrl
   },
   openGraph: {
-    title: coupleTitle,
+    title: previewTitle,
     description: coupleDescription,
     url: siteUrl,
     siteName: `${weddingData.groomName} ♥ ${weddingData.brideName}`,
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: coupleTitle,
+    title: previewTitle,
     description: coupleDescription,
     images: [heroImageUrl]
   }

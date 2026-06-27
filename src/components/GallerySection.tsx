@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { weddingData } from "@/data/wedding";
 import SafeImage from "./SafeImage";
 import SectionShell from "./SectionShell";
@@ -20,9 +20,29 @@ function getThumbnailIndexes(selectedIndex: number, total: number) {
 
 export default function GallerySection() {
   const images = weddingData.galleryImages;
+  const preloadCache = useRef<HTMLImageElement[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selectedImage = images[selectedIndex];
   const thumbnailIndexes = getThumbnailIndexes(selectedIndex, images.length);
+
+  useEffect(() => {
+    const preloadGallery = () => {
+      preloadCache.current = images.map((galleryImage) => {
+        const image = new window.Image();
+        image.decoding = "async";
+        image.src = galleryImage.src;
+        return image;
+      });
+    };
+
+    if (document.readyState === "complete") {
+      preloadGallery();
+      return;
+    }
+
+    window.addEventListener("load", preloadGallery, { once: true });
+    return () => window.removeEventListener("load", preloadGallery);
+  }, [images]);
 
   const goToPrevious = () => {
     setSelectedIndex((current) => (current - 1 + images.length) % images.length);
