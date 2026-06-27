@@ -52,16 +52,16 @@ export const weddingData = {
     { label: "신부 어머니", name: "윤수정", phone: "010-8829-7562" }
   ] satisfies PersonContact[],
   galleryImages: [
-    { src: "/images/gallery/photo1.svg", alt: "웨딩 사진 1" },
-    { src: "/images/gallery/photo2.svg", alt: "웨딩 사진 2" },
-    { src: "/images/gallery/photo3.svg", alt: "웨딩 사진 3" },
-    { src: "/images/gallery/photo4.svg", alt: "웨딩 사진 4" },
-    { src: "/images/gallery/photo5.svg", alt: "웨딩 사진 5" },
-    { src: "/images/gallery/photo6.svg", alt: "웨딩 사진 6" },
-    { src: "/images/gallery/photo7.svg", alt: "웨딩 사진 7" },
-    { src: "/images/gallery/photo8.svg", alt: "웨딩 사진 8" },
-    { src: "/images/gallery/photo9.svg", alt: "웨딩 사진 9" },
-    { src: "/images/gallery/photo10.svg", alt: "웨딩 사진 10" }
+    { src: "/images/gallery/photo1.jpeg", alt: "정원에서 세이브 더 데이트를 든 웨딩 사진" },
+    { src: "/images/gallery/photo2.jpeg", alt: "햇살 아래 나란히 선 신랑 신부" },
+    { src: "/images/gallery/photo3.jpeg", alt: "손을 잡고 걷는 신랑 신부의 흑백 사진" },
+    { src: "/images/gallery/photo4.jpeg", alt: "창가에 선 신랑 신부" },
+    { src: "/images/gallery/photo5.jpeg", alt: "정문 앞에서 미소 짓는 신랑 신부" },
+    { src: "/images/gallery/photo6.jpeg", alt: "꽃과 함께 앉아 있는 신부" },
+    { src: "/images/gallery/photo7.jpeg", alt: "소파에 나란히 앉은 신랑 신부" },
+    { src: "/images/gallery/photo8.jpeg", alt: "함께 미소 짓는 신랑 신부의 흑백 사진" },
+    { src: "/images/gallery/photo9.jpeg", alt: "꽃 장식 앞에서 마주 보는 신랑 신부" },
+    { src: "/images/gallery/photo10.jpeg", alt: "드레스와 턱시도를 입고 앉은 신랑 신부" }
   ] satisfies GalleryImage[],
   accounts: {
     groom: {
@@ -79,7 +79,7 @@ export const weddingData = {
           name: "배지수",
           bank: "농협",
           accountNumber: "150-121-56-023179",
-          kakaoPayUrl: ""
+          kakaoPayUrl: "https://qr.kakaopay.com/FZyAg8Axn"
         }
       ]
     },
