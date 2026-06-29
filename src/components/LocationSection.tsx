@@ -26,12 +26,12 @@ export default function LocationSection() {
           <p className="mt-2 text-sm leading-6 text-ink/65">{weddingData.venueAddress}</p>
         </div>
 
-        <div className="overflow-hidden rounded-lg border border-champagne bg-white shadow-soft">
+        <div className="relative aspect-[417/292] overflow-hidden rounded-lg border border-champagne bg-white shadow-soft">
           <SafeImage
             src={weddingData.venueDirectionsImage}
             alt={`${weddingData.venueName} 약도`}
-            className="block aspect-[40/27] w-full object-cover"
-            fallbackClassName="aspect-[40/27] w-full"
+            className="absolute right-0 top-0 h-auto w-[191.85%] max-w-none"
+            fallbackClassName="h-full w-full"
           />
         </div>
 

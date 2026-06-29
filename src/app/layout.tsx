@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Gaegu, Gowun_Dodum } from "next/font/google";
+import { Dancing_Script, Gaegu, Gowun_Dodum } from "next/font/google";
 import { weddingData } from "@/data/wedding";
 import { formatKoreanDate } from "@/utils/date";
 import "./globals.css";
@@ -21,6 +21,13 @@ const weddingFallbackFont = Gowun_Dodum({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-wedding-fallback",
+  display: "swap"
+});
+
+const openingScriptFont = Dancing_Script({
+  weight: ["400", "600"],
+  subsets: ["latin"],
+  variable: "--font-opening-script",
   display: "swap"
 });
 
@@ -71,7 +78,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${weddingBodyFont.variable} ${weddingFallbackFont.variable}`}>
+      <body
+        className={`${weddingBodyFont.variable} ${weddingFallbackFont.variable} ${openingScriptFont.variable}`}
+      >
         {children}
       </body>
     </html>

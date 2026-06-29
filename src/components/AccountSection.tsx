@@ -45,12 +45,7 @@ export default function AccountSection() {
                 onClick={() => setOpenSide(isOpen ? null : side)}
                 aria-expanded={isOpen}
               >
-                <span>
-                  <span className="block text-sm font-semibold text-ink">{group.title}</span>
-                  <span className="mt-1 block text-xs font-medium text-ink/50">
-                    본인 및 부모님 계좌 {group.people.length}개
-                  </span>
-                </span>
+                <span className="text-sm font-semibold text-ink">{group.title}</span>
                 <ChevronDown
                   aria-hidden
                   size={18}

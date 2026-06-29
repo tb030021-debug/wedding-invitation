@@ -95,3 +95,89 @@ select:focus-visible {
     transform: scale(1);
   }
 }
+
+.opening-intro {
+  animation: openingIntroFade 0.9s ease 5.8s forwards;
+}
+
+.opening-intro__image {
+  animation: openingIntroZoom 6.8s cubic-bezier(0.2, 0.65, 0.3, 1) forwards;
+  will-change: transform;
+}
+
+.opening-intro__shade {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(29, 28, 22, 0.24), transparent 45%),
+    linear-gradient(180deg, rgba(22, 28, 19, 0.06), rgba(26, 25, 20, 0.17));
+}
+
+.opening-intro__copy {
+  color: #fffaf1;
+  font-family: var(--font-opening-script), "Snell Roundhand", "Segoe Script", cursive;
+  font-size: clamp(1.9rem, 8vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  text-shadow: 0 2px 12px rgba(20, 23, 18, 0.72);
+}
+
+.opening-intro__line {
+  margin: 0;
+  clip-path: inset(0 100% 0 0);
+  white-space: nowrap;
+  will-change: clip-path;
+}
+
+.opening-intro__line--one {
+  animation: openingIntroWrite 1.7s ease-out 0.7s forwards;
+}
+
+.opening-intro__line--two {
+  animation: openingIntroWrite 1s ease-out 2.35s forwards;
+}
+
+.opening-intro__line--three {
+  margin-top: 0.55rem;
+  animation: openingIntroWrite 1.7s ease-out 3.3s forwards;
+}
+
+@keyframes openingIntroZoom {
+  from {
+    transform: scale(1.01);
+  }
+
+  to {
+    transform: scale(1.13);
+  }
+}
+
+@keyframes openingIntroWrite {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes openingIntroFade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opening-intro,
+  .opening-intro__image,
+  .opening-intro__line {
+    animation: none;
+  }
+
+  .opening-intro__line {
+    clip-path: none;
+  }
+}

@@ -47,7 +47,8 @@ export const weddingData = {
   shareImage: "/images/gallery/photo1.jpeg",
   endingMessage:
     "소중한 걸음으로 저희의 시작을 함께해 주셔서 감사합니다.\n보내주신 마음 오래도록 간직하며 예쁘게 살아가겠습니다.",
-  introMessage: "서로의 계절이 되어\n같은 길을 걷겠습니다.",
+  introMessage:
+    "저희 두 사람이 사랑과 믿음으로\n한 가정을 이루려 합니다.\n귀한 걸음으로 함께해 주시면\n더없는 기쁨으로 간직하겠습니다.",
   invitationMessage:
     "저희 두 사람이 사랑과 믿음으로\n한 가정을 이루려 합니다.\n귀한 걸음으로 함께해 주시면\n더없는 기쁨으로 간직하겠습니다.",
   groomPhone: "010-2733-5177",
