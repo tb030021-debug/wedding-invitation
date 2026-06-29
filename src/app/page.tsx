@@ -1,5 +1,4 @@
 import AccountSection from "@/components/AccountSection";
-import CalendarSection from "@/components/CalendarSection";
 import ContactSection from "@/components/ContactSection";
 import EndingSection from "@/components/EndingSection";
 import FadeInSection from "@/components/FadeInSection";
@@ -9,18 +8,15 @@ import GuestbookSection from "@/components/GuestbookSection";
 import IntroSection from "@/components/IntroSection";
 import InvitationSection from "@/components/InvitationSection";
 import LocationSection from "@/components/LocationSection";
-import MusicSection from "@/components/MusicSection";
 import ScheduleSection from "@/components/ScheduleSection";
 import ShareSection from "@/components/ShareSection";
 
 const sections = [
-  { key: "music", Component: MusicSection },
   { key: "invitation", Component: InvitationSection },
   { key: "schedule", Component: ScheduleSection },
-  { key: "calendar", Component: CalendarSection },
+  { key: "location", Component: LocationSection },
   { key: "gallery", Component: GallerySection },
   { key: "guest-photos", Component: GuestPhotoSection },
-  { key: "location", Component: LocationSection },
   { key: "contact", Component: ContactSection },
   { key: "account", Component: AccountSection },
   { key: "guestbook", Component: GuestbookSection },

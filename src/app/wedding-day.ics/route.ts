@@ -9,7 +9,8 @@ export function GET() {
       "Content-Type": "text/calendar; charset=utf-8",
       "Content-Disposition":
         "inline; filename=\"wedding-day.ics\"; filename*=UTF-8''wedding-day.ics",
-      "Cache-Control": "public, max-age=3600"
+      "Cache-Control": "public, max-age=3600",
+      "X-Content-Type-Options": "nosniff"
     }
   });
 }

@@ -45,11 +45,6 @@ export const weddingData = {
   },
   heroImage: "/images/hero.jpeg",
   shareImage: "/images/gallery/photo1.jpeg",
-  music: {
-    title: "기념일",
-    artist: "한동근",
-    youtubeVideoId: "ykw880hg3WY"
-  },
   endingMessage:
     "소중한 걸음으로 저희의 시작을 함께해 주셔서 감사합니다.\n보내주신 마음 오래도록 간직하며 예쁘게 살아가겠습니다.",
   introMessage: "서로의 계절이 되어\n같은 길을 걷겠습니다.",
