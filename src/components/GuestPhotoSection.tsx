@@ -282,7 +282,11 @@ export default function GuestPhotoSection() {
           disabled={isPreparing || isUploading || pendingPhotos.length === 0}
         >
           <Send aria-hidden size={17} />
-          {isUploading ? "사진 보내는 중" : `사진 ${pendingPhotos.length || ""}장 보내기`}
+          {isUploading
+            ? "사진 보내는 중"
+            : pendingPhotos.length > 0
+              ? `사진 ${pendingPhotos.length}장 보내기`
+              : "사진 보내기"}
         </button>
 
         {status ? (
