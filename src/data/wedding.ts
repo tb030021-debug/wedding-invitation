@@ -34,10 +34,24 @@ export const weddingData = {
   brideName: "안민주",
   weddingDate: "2026-11-08",
   weddingTime: "오후 1시 00분",
+  weddingTime24: "13:00",
+  weddingDurationMinutes: 120,
   venueName: "BMK컨벤션 아스틴홀 4F",
   venueAddress: "대전 중구 서문로 133",
+  venueDirectionsImage: "/images/bmk-directions.jpg",
+  parking: {
+    floors: "지하 1층 · 지하 2층",
+    capacity: "총 600대 수용 가능"
+  },
   heroImage: "/images/hero.jpeg",
   shareImage: "/images/gallery/photo1.jpeg",
+  music: {
+    title: "기념일",
+    artist: "한동근",
+    youtubeVideoId: "ykw880hg3WY"
+  },
+  endingMessage:
+    "소중한 걸음으로 저희의 시작을 함께해 주셔서 감사합니다.\n보내주신 마음 오래도록 간직하며 예쁘게 살아가겠습니다.",
   introMessage: "서로의 계절이 되어\n같은 길을 걷겠습니다.",
   invitationMessage:
     "저희 두 사람이 사랑과 믿음으로\n한 가정을 이루려 합니다.\n귀한 걸음으로 함께해 주시면\n더없는 기쁨으로 간직하겠습니다.",

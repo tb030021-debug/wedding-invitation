@@ -1,9 +1,10 @@
 "use client";
 
-import { Copy, ExternalLink, MapPin } from "lucide-react";
+import { CarFront, Copy, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { weddingData } from "@/data/wedding";
 import { copyToClipboard } from "@/utils/copy";
+import SafeImage from "./SafeImage";
 import SectionShell from "./SectionShell";
 
 export default function LocationSection() {
@@ -25,11 +26,24 @@ export default function LocationSection() {
           <p className="mt-2 text-sm leading-6 text-ink/65">{weddingData.venueAddress}</p>
         </div>
 
-        <div className="flex aspect-[4/3] items-center justify-center rounded-lg border border-dashed border-gold/35 bg-[linear-gradient(135deg,#fffaf0,#f7d8dc_54%,#e9d4a9)] text-center">
-          <div className="space-y-2 px-6">
-            <MapPin className="mx-auto text-gold" aria-hidden size={30} strokeWidth={1.6} />
-            <p className="text-sm font-semibold text-ink">지도 영역</p>
-            <p className="text-xs leading-5 text-ink/55">실제 지도 API는 배포 환경에 맞춰 연결하세요.</p>
+        <div className="overflow-hidden rounded-lg border border-champagne bg-white shadow-soft">
+          <SafeImage
+            src={weddingData.venueDirectionsImage}
+            alt={`${weddingData.venueName} 약도`}
+            className="block aspect-[40/27] w-full object-cover"
+            fallbackClassName="aspect-[40/27] w-full"
+          />
+        </div>
+
+        <div className="flex items-center gap-3 rounded-lg border border-gold/20 bg-ivory/70 p-4">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-gold shadow-sm">
+            <CarFront aria-hidden size={22} strokeWidth={1.7} />
+          </span>
+          <div>
+            <p className="text-sm font-semibold text-ink">건물 지하 주차장</p>
+            <p className="mt-1 text-sm leading-6 text-ink/65">
+              {weddingData.parking.floors} · {weddingData.parking.capacity}
+            </p>
           </div>
         </div>
 

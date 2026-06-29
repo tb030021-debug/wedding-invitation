@@ -26,6 +26,8 @@ export const guestbookDeleteSchema = z.object({
   password: fourDigitPasswordSchema
 });
 
+export const guestPhotoUploaderNameSchema = trimmedString(1, 20, "이름");
+
 export const adminLoginSchema = z.object({
   username: trimmedString(1, 50, "아이디"),
   password: trimmedString(4, 100, "비밀번호")

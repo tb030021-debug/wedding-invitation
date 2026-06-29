@@ -3,6 +3,7 @@
 import { LogOut, RefreshCw } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import AdminGuestbookFilters, { type AdminFilters } from "./AdminGuestbookFilters";
+import AdminGuestPhotoGallery from "./AdminGuestPhotoGallery";
 import AdminGuestbookTable, { type AdminGuestbookMessage } from "./AdminGuestbookTable";
 import AdminStatsCards from "./AdminStatsCards";
 
@@ -179,8 +180,8 @@ export default function AdminGuestbookDashboard({ username }: AdminGuestbookDash
       <div className="mx-auto max-w-6xl space-y-5">
         <header className="flex flex-col gap-4 rounded-lg border border-white/80 bg-white/80 p-5 shadow-soft backdrop-blur md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="section-kicker">Guestbook Admin</p>
-            <h1 className="section-title mt-2">방명록 관리</h1>
+            <p className="section-kicker">Wedding Admin</p>
+            <h1 className="section-title mt-2">청첩장 관리</h1>
             <p className="mt-2 text-sm text-ink/60">{username} 계정으로 로그인 중입니다.</p>
           </div>
           <div className="flex gap-2">
@@ -210,6 +211,8 @@ export default function AdminGuestbookDashboard({ username }: AdminGuestbookDash
           onToggleHidden={handleToggleHidden}
           onDelete={handleDelete}
         />
+
+        <AdminGuestPhotoGallery />
       </div>
     </main>
   );

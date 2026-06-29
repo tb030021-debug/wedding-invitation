@@ -1,3 +1,4 @@
+import { CalendarPlus } from "lucide-react";
 import { weddingData } from "@/data/wedding";
 import { parseLocalDate } from "@/utils/date";
 import SectionShell from "./SectionShell";
@@ -49,6 +50,10 @@ export default function CalendarSection() {
       <p className="mt-4 whitespace-pre-line text-center text-sm leading-6 text-ink/65">
         {"분홍빛으로 표시된 날,\n두 사람의 시작을 함께 축복해 주세요."}
       </p>
+      <a className="primary-button mt-4 w-full" href="/api/calendar">
+        <CalendarPlus aria-hidden size={17} />
+        Wedding Day 캘린더에 저장
+      </a>
     </SectionShell>
   );
 }

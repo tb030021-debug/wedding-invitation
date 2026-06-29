@@ -21,6 +21,7 @@ model Wedding {
   venueName    String
   venueAddress String
   messages     GuestbookMessage[]
+  guestPhotos  GuestPhoto[]
   createdAt    DateTime           @default(now())
   updatedAt    DateTime           @updatedAt
 }
@@ -40,6 +41,20 @@ model GuestbookMessage {
   @@index([weddingId, createdAt])
   @@index([weddingId, isHidden, createdAt])
   @@index([weddingId, side, createdAt])
+}
+
+model GuestPhoto {
+  id           String   @id @default(cuid())
+  weddingId    String
+  wedding      Wedding  @relation(fields: [weddingId], references: [id], onDelete: Cascade)
+  uploaderName String
+  originalName String
+  mimeType     String
+  size         Int
+  imageData    Bytes
+  createdAt    DateTime @default(now())
+
+  @@index([weddingId, createdAt])
 }
 
 model Admin {
